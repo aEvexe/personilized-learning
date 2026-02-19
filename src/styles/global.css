@@ -1,0 +1,87 @@
+:root {
+    --primary: #9333ea;
+    --primary-hover: #7c3aed;
+    --primary-light: #b855f7;
+    --primary-dark: #6b21a8;
+    --bg-main: #1f2937;
+    --bg-header: #1a2332;
+    --bg-card: #2d3748;
+    --bg-card-hover: #374151;
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+    --text-muted: #6b7280;
+    --text-dark: #2C2C2C;
+    --success: #58cc02;
+    --success-hover: #4ab000;
+    --error: #ff4b4b;
+    --warning: #ffc800;
+    --progress-bg: #374151;
+    --progress-fill: #9333ea;
+    --white: #FFFFFF;
+    --border-color: #374151;
+    --shadow-purple: rgba(147, 51, 234, 0.15);
+    --shadow-purple-hover: rgba(147, 51, 234, 0.25);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'SF Pro Display', Roboto, sans-serif;
+    background: #1f2937;
+    min-height: 100vh;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    transition: all 0.3s;
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--shadow-purple);
+    background: var(--bg-card-hover);
+}
+
+button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 10px;
+}
+
+button:disabled {
+    background: var(--progress-bg);
+    color: var(--text-muted);
+    cursor: not-allowed;
+    transform: none;
+    border: 2px solid var(--bg-card);
+}
+
+a { color: var(--primary-light); text-decoration: none; }
+a:hover { color: var(--primary); text-decoration: underline; }

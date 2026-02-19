@@ -1,0 +1,117 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #1a2332;
+    padding: 16px 24px;
+    border-bottom: 2px solid #2d3748;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    color: var(--text-primary);
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    width: 100%;
+}
+
+.content.lesson-active {
+    padding: 0;
+    align-items: stretch;
+}
+
+/* Page wrapper - equivalent to original .page.active */
+.content > * {
+    width: 100%;
+    max-width: 1200px;
+    animation: fadeIn 0.3s;
+}
+
+.breadcrumb {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.breadcrumb a {
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.debug-toggle-btn {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 2px solid var(--bg-card);
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.debug-toggle-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.lesson-page-layout {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 58px);
+    overflow: hidden;
+    padding: 12px 0 0;
+}
+
+.lesson-page-layout > .fc-back-btn {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin: 0 24px 8px;
+}
+
+.lesson-page-layout > .section-title {
+    flex-shrink: 0;
+    padding: 4px 24px 0;
+}
+
+.lesson-page-layout > .lesson-content-area {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0;
+    min-height: 0;
+}
