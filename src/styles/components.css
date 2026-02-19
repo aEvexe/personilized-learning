@@ -2044,15 +2044,9 @@
   padding: 0 16px;
 }
 
-.auth-social-btns {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
 .auth-social-btn {
-  flex: 1;
-  padding: 14px;
+  width: 100%;
+  padding: 16px;
   background: transparent;
   border: 2px solid #374151;
   border-radius: 12px;
@@ -2064,8 +2058,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 0.85em;
+  font-size: 1em;
   letter-spacing: 0.5px;
+  margin-bottom: 24px;
 }
 
 .auth-social-btn:hover {
